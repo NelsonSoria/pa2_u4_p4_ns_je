@@ -34,6 +34,7 @@ public class PropietarioServiceImpl implements IPropietarioService{
 	}
 
 	@Override
+	@Transactional(value = TxType.REQUIRES_NEW)
 	public void actualizar(Propietario propietario) {
 		this.iPropietarioRepository.actualizar(propietario);
 		
